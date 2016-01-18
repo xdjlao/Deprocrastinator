@@ -40,15 +40,15 @@
                                     <constraint firstAttribute="height" constant="50" id="0UY-rA-XwX"/>
                                 </constraints>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="21" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eRu-Ly-Ny0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eRu-Ly-Ny0">
                                 <rect key="frame" x="0.0" y="114" width="600" height="486"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="21" id="eB3-jL-TUG">
-                                        <rect key="frame" x="0.0" y="92" width="600" height="21"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="50" id="eB3-jL-TUG">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eB3-jL-TUG" id="ayc-W0-Paq">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="20"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -70,6 +70,9 @@
                             <constraint firstItem="zBO-D5-sPf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="y4S-If-ubg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="eRu-Ly-Ny0" secondAttribute="bottom" id="yCC-uG-JB6"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="w7K-ri-tco" appends="YES" id="S4v-vL-thX"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Jv6-BC-4Xj">
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="SfE-qE-hL2">
@@ -84,6 +87,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="w7K-ri-tco">
+                    <connections>
+                        <action selector="onSwipeRight:" destination="BYZ-38-t0r" id="wFD-jC-7SO"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1057" y="307"/>
         </scene>

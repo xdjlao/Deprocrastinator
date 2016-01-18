@@ -58,8 +58,6 @@
 		A2291DA81C4D916900F12142 /* Deprocrastinator */ = {
 			isa = PBXGroup;
 			children = (
-				A2291DAC1C4D916900F12142 /* AppDelegate.h */,
-				A2291DAD1C4D916900F12142 /* AppDelegate.m */,
 				A2291DAF1C4D916900F12142 /* ViewController.h */,
 				A2291DB01C4D916900F12142 /* ViewController.m */,
 				A2291DB21C4D916900F12142 /* Main.storyboard */,
@@ -74,6 +72,8 @@
 		A2291DA91C4D916900F12142 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A2291DAC1C4D916900F12142 /* AppDelegate.h */,
+				A2291DAD1C4D916900F12142 /* AppDelegate.m */,
 				A2291DAA1C4D916900F12142 /* main.m */,
 			);
 			name = "Supporting Files";
