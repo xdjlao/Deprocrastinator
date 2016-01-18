@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2291DAB1C4D916900F12142 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2291DAA1C4D916900F12142 /* main.m */; };
+		A2291DAE1C4D916900F12142 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2291DAD1C4D916900F12142 /* AppDelegate.m */; };
+		A2291DB11C4D916900F12142 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2291DB01C4D916900F12142 /* ViewController.m */; };
+		A2291DB41C4D916900F12142 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2291DB21C4D916900F12142 /* Main.storyboard */; };
+		A2291DB61C4D916900F12142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2291DB51C4D916900F12142 /* Assets.xcassets */; };
+		A2291DB91C4D916900F12142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2291DB71C4D916900F12142 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A2291DA61C4D916900F12142 /* Deprocrastinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deprocrastinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2291DAA1C4D916900F12142 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A2291DAC1C4D916900F12142 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A2291DAD1C4D916900F12142 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A2291DAF1C4D916900F12142 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A2291DB01C4D916900F12142 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A2291DB31C4D916900F12142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A2291DB51C4D916900F12142 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2291DB81C4D916900F12142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A2291DBA1C4D916900F12142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2291DA31C4D916900F12142 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2291D9D1C4D916900F12142 = {
+			isa = PBXGroup;
+			children = (
+				A2291DA81C4D916900F12142 /* Deprocrastinator */,
+				A2291DA71C4D916900F12142 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2291DA71C4D916900F12142 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2291DA61C4D916900F12142 /* Deprocrastinator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2291DA81C4D916900F12142 /* Deprocrastinator */ = {
+			isa = PBXGroup;
+			children = (
+				A2291DAC1C4D916900F12142 /* AppDelegate.h */,
+				A2291DAD1C4D916900F12142 /* AppDelegate.m */,
+				A2291DAF1C4D916900F12142 /* ViewController.h */,
+				A2291DB01C4D916900F12142 /* ViewController.m */,
+				A2291DB21C4D916900F12142 /* Main.storyboard */,
+				A2291DB51C4D916900F12142 /* Assets.xcassets */,
+				A2291DB71C4D916900F12142 /* LaunchScreen.storyboard */,
+				A2291DBA1C4D916900F12142 /* Info.plist */,
+				A2291DA91C4D916900F12142 /* Supporting Files */,
+			);
+			path = Deprocrastinator;
+			sourceTree = "<group>";
+		};
+		A2291DA91C4D916900F12142 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2291DAA1C4D916900F12142 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2291DA51C4D916900F12142 /* Deprocrastinator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2291DBD1C4D916900F12142 /* Build configuration list for PBXNativeTarget "Deprocrastinator" */;
+			buildPhases = (
+				A2291DA21C4D916900F12142 /* Sources */,
+				A2291DA31C4D916900F12142 /* Frameworks */,
+				A2291DA41C4D916900F12142 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Deprocrastinator;
+			productName = Deprocrastinator;
+			productReference = A2291DA61C4D916900F12142 /* Deprocrastinator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2291D9E1C4D916900F12142 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Jerry Lao";
+				TargetAttributes = {
+					A2291DA51C4D916900F12142 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = A2291DA11C4D916900F12142 /* Build configuration list for PBXProject "Deprocrastinator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2291D9D1C4D916900F12142;
+			productRefGroup = A2291DA71C4D916900F12142 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2291DA51C4D916900F12142 /* Deprocrastinator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2291DA41C4D916900F12142 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2291DB91C4D916900F12142 /* LaunchScreen.storyboard in Resources */,
+				A2291DB61C4D916900F12142 /* Assets.xcassets in Resources */,
+				A2291DB41C4D916900F12142 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2291DA21C4D916900F12142 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2291DB11C4D916900F12142 /* ViewController.m in Sources */,
+				A2291DAE1C4D916900F12142 /* AppDelegate.m in Sources */,
+				A2291DAB1C4D916900F12142 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A2291DB21C4D916900F12142 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2291DB31C4D916900F12142 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A2291DB71C4D916900F12142 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2291DB81C4D916900F12142 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A2291DBB1C4D916900F12142 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A2291DBC1C4D916900F12142 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2291DBE1C4D916900F12142 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Deprocrastinator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerrylao.Deprocrastinator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2291DBF1C4D916900F12142 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Deprocrastinator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerrylao.Deprocrastinator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2291DA11C4D916900F12142 /* Build configuration list for PBXProject "Deprocrastinator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2291DBB1C4D916900F12142 /* Debug */,
+				A2291DBC1C4D916900F12142 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2291DBD1C4D916900F12142 /* Build configuration list for PBXNativeTarget "Deprocrastinator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2291DBE1C4D916900F12142 /* Debug */,
+				A2291DBF1C4D916900F12142 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2291D9E1C4D916900F12142 /* Project object */;
+}
