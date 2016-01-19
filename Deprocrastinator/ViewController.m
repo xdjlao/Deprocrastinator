@@ -11,7 +11,7 @@
 @interface ViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property NSMutableArray *toDoList;
+@property NSMutableArray *cellArray;
 @property (weak, nonatomic) IBOutlet UITextField *enterTextField;
 
 @end
@@ -21,19 +21,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.toDoList = [[NSMutableArray alloc] initWithObjects:@"Study Objective-C", @"Eat", @"Sleep", nil];
+    self.cellArray = [NSMutableArray new];
+//    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+//    cell.backgroundColor = [UIColor redColor];
+//    [self.cellArray addObject:cell];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    cell.textLabel.text = [self.toDoList objectAtIndex:indexPath.row];
-    cell.backgroundColor = [UIColor whiteColor];
+    cell = [self.cellArray objectAtIndex:indexPath.row];
+//    cell.backgroundColor = [UIColor whiteColor];
     
     return cell;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.toDoList.count;
+    return self.cellArray.count;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -44,7 +47,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"You sure?" message:@"Delete this" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"Delete" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self.toDoList removeObjectAtIndex:indexPath.row];
+        [self.cellArray removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
     }];
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
@@ -56,9 +59,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
-    NSString *listItem = [self.toDoList objectAtIndex:destinationIndexPath.row];
-    [self.toDoList replaceObjectAtIndex:destinationIndexPath.row withObject:[tableView cellForRowAtIndexPath:sourceIndexPath].textLabel.text];
-    [self.toDoList replaceObjectAtIndex:sourceIndexPath.row withObject:listItem];
+    UITableViewCell *listItem = [self.cellArray objectAtIndex:destinationIndexPath.row];
+    [self.cellArray replaceObjectAtIndex:destinationIndexPath.row withObject:[tableView cellForRowAtIndexPath:sourceIndexPath]];
+    [self.cellArray replaceObjectAtIndex:sourceIndexPath.row withObject:listItem];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -81,7 +84,11 @@
 }
 
 - (void)addToArray {
-    [self.toDoList addObject:self.enterTextField.text];
+    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    cell.textLabel.text = self.enterTextField.text;
+    cell.backgroundColor = [UIColor whiteColor];
+    
+    [self.cellArray addObject:cell];
 }
 
 - (IBAction)onSwipeRight:(UISwipeGestureRecognizer *)sender {
@@ -96,6 +103,7 @@
     } else if (cell.backgroundColor == [UIColor redColor]) {
         cell.backgroundColor = [UIColor whiteColor];
     }
+    [self.cellArray insertObject:cell atIndex:[self.tableView indexPathForRowAtPoint:swipeLocation].row];
 }
 
 @end
