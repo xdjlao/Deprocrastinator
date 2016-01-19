@@ -30,7 +30,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     cell = [self.cellArray objectAtIndex:indexPath.row];
-//    cell.backgroundColor = [UIColor whiteColor];
     
     return cell;
 }
@@ -44,7 +43,12 @@
     cell.textLabel.textColor = [UIColor greenColor];
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"You sure?" message:@"Delete this" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *deleteAction = [UIAlertAction actionWithTitle:@"Delete" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self.cellArray removeObjectAtIndex:indexPath.row];
@@ -59,13 +63,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
-    UITableViewCell *listItem = [self.cellArray objectAtIndex:destinationIndexPath.row];
-    [self.cellArray replaceObjectAtIndex:destinationIndexPath.row withObject:[tableView cellForRowAtIndexPath:sourceIndexPath]];
-    [self.cellArray replaceObjectAtIndex:sourceIndexPath.row withObject:listItem];
-}
+    UITableViewCell *sourceItem = [self.cellArray objectAtIndex:sourceIndexPath.row];
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
+    [self.cellArray removeObjectAtIndex:sourceIndexPath.row];
+    [self.cellArray insertObject:sourceItem atIndex:destinationIndexPath.row];
 }
 
 - (IBAction)onAddPressed:(UIButton *)sender {
@@ -103,7 +104,8 @@
     } else if (cell.backgroundColor == [UIColor redColor]) {
         cell.backgroundColor = [UIColor whiteColor];
     }
-    [self.cellArray insertObject:cell atIndex:[self.tableView indexPathForRowAtPoint:swipeLocation].row];
+    //[self.cellArray insertObject:cell atIndex:[self.tableView indexPathForRowAtPoint:swipeLocation].row];
+    [self.cellArray replaceObjectAtIndex:[self.tableView indexPathForRowAtPoint:swipeLocation].row withObject:cell];
 }
 
 @end
